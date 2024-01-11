@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Gudang_Super_Market.props" />
+</Project>

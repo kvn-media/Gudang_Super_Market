@@ -1,0 +1,52 @@
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.csproj.AssemblyReference.cache
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.AssemblyInfoInputs.cache
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.AssemblyInfo.cs
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.csproj.CoreCompileInputs.cache
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.MvcApplicationPartsAssemblyInfo.cs
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.MvcApplicationPartsAssemblyInfo.cache
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\appsettings.Development.json
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\appsettings.json
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Gudang Super Market.exe
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Gudang Super Market.deps.json
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Gudang Super Market.runtimeconfig.json
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Gudang Super Market.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Gudang Super Market.pdb
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Humanizer.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Npgsql.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\staticwebassets\msbuild.Gudang Super Market.Microsoft.AspNetCore.StaticWebAssets.props
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\staticwebassets\msbuild.build.Gudang Super Market.props
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Gudang Super Market.props
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Gudang Super Market.props
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\staticwebassets.pack.json
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\staticwebassets.build.json
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\staticwebassets.development.json
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\scopedcss\bundle\Gudang Super Market.styles.css
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.csproj.CopyComplete
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.dll
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\refint\Gudang Super Market.dll
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.pdb
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\Gudang Super Market.genruntimeconfig.cache
+D:\dev\Gudang Super Market\Gudang Super Market\obj\Debug\net6.0\ref\Gudang Super Market.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\BCrypt.Net-Next.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\dev\Gudang Super Market\Gudang Super Market\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
