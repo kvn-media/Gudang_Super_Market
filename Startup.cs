@@ -8,6 +8,7 @@ using System;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
+using Gudang_Super_Market.Models;
 
 namespace Gudang_Super_Market
 {
@@ -25,17 +26,20 @@ namespace Gudang_Super_Market
             services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
-            // Swagger configuration
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Gudang Super Market", Version = "v1" });
-            });
+            // Tambahkan layanan kontroler
+            services.AddControllers();
 
             // Tambahkan konfigurasi logging
             services.AddLogging();
 
             // Tambahkan konfigurasi caching
             services.AddMemoryCache();
+
+            //Swagger configuration
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Gudang Super Market", Version = "v1" });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
@@ -43,6 +47,7 @@ namespace Gudang_Super_Market
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {

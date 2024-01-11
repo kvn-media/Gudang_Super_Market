@@ -1,5 +1,4 @@
-﻿// BarangController.cs
-using Gudang_Super_Market.Models;
+﻿using Gudang_Super_Market.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
