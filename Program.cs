@@ -24,14 +24,6 @@ namespace Gudang_Super_Market
                 {
                     logging.ClearProviders();
                     logging.AddConsole();
-                })
-                .ConfigureServices((hostContext, services) =>
-                {
-                    // Tambahkan layanan Anda di sini jika diperlukan
-                    services.AddSwaggerGen(c =>
-                    {
-                        c.SwaggerDoc("v1", new OpenApiInfo { Title = "Gudang Super Market", Version = "v1" });
-                    });
                 });
     }
 }
