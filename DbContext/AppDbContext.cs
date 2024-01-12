@@ -30,11 +30,24 @@ public class AppDbContext : DbContext
             .HasIndex(b => b.NamaBarang)
             .IsUnique();
 
+        // Menambahkan ForeignKey ke kolom GudangId pada tabel Barang
+        modelBuilder.Entity<Barang>()
+            .HasOne(b => b.Gudang)
+            .WithMany(g => g.Barangs)
+            .HasForeignKey(b => b.GudangId)
+            .OnDelete(DeleteBehavior.Cascade); // Sesuaikan kebijakan penghapusan sesuai kebutuhan
+
         // Konfigurasi untuk tabel Gudang
         modelBuilder.Entity<Gudang>()
             .Property(g => g.NamaGudang)
             .HasMaxLength(50) // Misalnya, batasan panjang maksimum
             .IsRequired(); // NamaGudang wajib diisi
+
+        // Menambahkan indeks ke kolom NamaGudang pada tabel Gudang
+        modelBuilder.Entity<Gudang>()
+            .HasIndex(g => g.NamaGudang)
+            .IsUnique();
+
 
         // Konfigurasi lainnya sesuai kebutuhan Anda...
 

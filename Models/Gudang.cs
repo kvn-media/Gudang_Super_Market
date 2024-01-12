@@ -8,6 +8,9 @@ namespace Gudang_Super_Market.Models
 
         [Required(ErrorMessage = "Nama Gudang harus diisi.")]
         public string NamaGudang { get; set; }
-        
+
+        // Navigation property to represent the relationship with Barangs
+        public List<Barang> Barangs { get; set; }
+
     }
 }

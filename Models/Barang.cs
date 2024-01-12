@@ -18,7 +18,10 @@ namespace Gudang_Super_Market.Models
         [DataType(DataType.Date)]
         public DateTime ExpiredDate { get; set; }
 
+        // Tambahkan properti GudangId
         public int GudangId { get; set; }
+
+        // Tambahkan properti navigasi Gudang
         public Gudang Gudang { get; set; }
 
     }
