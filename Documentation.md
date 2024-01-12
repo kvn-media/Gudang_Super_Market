@@ -12,7 +12,7 @@ Aplikasi Gudang Super Market adalah sebuah sistem manajemen gudang sederhana yan
    - **obj:** Direktori objek terkompilasi.
    - **Properties:** Mengandung file-file konfigurasi.
    - **Migrations:** Mengandung file-file migrasi database.
-   - **wwwroot:** Direktori untuk menyimpan file statis (jika diperlukan).
+<!--   - **wwwroot:** Direktori untuk menyimpan file statis (jika diperlukan). -->
    - **appsettings.json:** File konfigurasi utama.
 
 2. **Postman:** Direktori yang berisi file Postman Collection untuk diimpor dan diuji.

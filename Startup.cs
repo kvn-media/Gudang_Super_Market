@@ -35,10 +35,10 @@ namespace Gudang_Super_Market
             // Tambahkan konfigurasi caching
             services.AddMemoryCache();
 
-            // Tambahkan kebijakan CORS jika diperlukan
+            // CORS configuration
             services.AddCors(options =>
             {
-                options.AddDefaultPolicy(builder =>
+                options.AddPolicy("AllowAll", builder =>
                 {
                     builder.AllowAnyOrigin()
                            .AllowAnyMethod()
@@ -63,13 +63,13 @@ namespace Gudang_Super_Market
                 app.UseSwaggerUI(c =>
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gudang Super Market v1");
-                    c.RoutePrefix = string.Empty;
+                    c.RoutePrefix = "/swagger";
                 });
             }
 
             app.UseMiddleware<ErrorHandlerMiddleware>();
 
-            app.UseCors();
+            app.UseCors("AllowAll");
 
             app.UseRouting();
 
