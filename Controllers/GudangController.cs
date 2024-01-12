@@ -1,4 +1,3 @@
-// GudangController.cs
 using Gudang_Super_Market.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -6,92 +5,96 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-[ApiController]
-[Route("api/[controller]")]
-public class GudangController : ControllerBase
+namespace Gudang_Super_Market.Controllers
 {
-    private readonly AppDbContext _context;
-
-    public GudangController(AppDbContext context)
+    [ApiController]
+    [Route("/gudang")]
+    public class GudangController : ControllerBase
     {
-        _context = context;
-    }
+        private readonly AppDbContext _context;
 
-    // Implementasi CRUD untuk Gudang
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Gudang>>> GetGudangs()
-    {
-        return await _context.Gudangs.ToListAsync();
-    }
-
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Gudang>> GetGudang(int id)
-    {
-        var gudang = await _context.Gudangs.FindAsync(id);
-
-        if (gudang == null)
+        public GudangController(AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        return gudang;
-    }
-
-    [HttpPost]
-    public async Task<ActionResult<Gudang>> CreateGudang(Gudang gudang)
-    {
-        _context.Gudangs.Add(gudang);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction(nameof(GetGudang), new { id = gudang.Id }, gudang);
-    }
-
-    [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateGudang(int id, Gudang gudang)
-    {
-        if (id != gudang.Id)
+        // Implementasi CRUD untuk Gudang
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Gudang>>> GetGudangs()
         {
-            return BadRequest();
+            return await _context.Gudangs.ToListAsync();
         }
 
-        _context.Entry(gudang).State = EntityState.Modified;
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Gudang>> GetGudang(int id)
+        {
+            var gudang = await _context.Gudangs.FindAsync(id);
 
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!GudangExists(id))
+            if (gudang == null)
             {
                 return NotFound();
             }
-            else
-            {
-                throw;
-            }
+
+            return gudang;
         }
 
-        return NoContent();
-    }
-
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteGudang(int id)
-    {
-        var gudang = await _context.Gudangs.FindAsync(id);
-        if (gudang == null)
+        [HttpPost]
+        public async Task<ActionResult<Gudang>> CreateGudang(Gudang gudang)
         {
-            return NotFound();
+            _context.Gudangs.Add(gudang);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetGudang), new { id = gudang.Id }, gudang);
         }
 
-        _context.Gudangs.Remove(gudang);
-        await _context.SaveChangesAsync();
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateGudang(int id, Gudang gudang)
+        {
+            if (id != gudang.Id)
+            {
+                return BadRequest();
+            }
 
-        return NoContent();
-    }
+            _context.Entry(gudang).State = EntityState.Modified;
 
-    private bool GudangExists(int id)
-    {
-        return _context.Gudangs.Any(e => e.Id == id);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!GudangExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteGudang(int id)
+        {
+            var gudang = await _context.Gudangs.FindAsync(id);
+            if (gudang == null)
+            {
+                return NotFound();
+            }
+
+            _context.Gudangs.Remove(gudang);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        private bool GudangExists(int id)
+        {
+            return _context.Gudangs.Any(e => e.Id == id);
+        }
     }
 }
+

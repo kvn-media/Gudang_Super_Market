@@ -35,6 +35,17 @@ namespace Gudang_Super_Market
             // Tambahkan konfigurasi caching
             services.AddMemoryCache();
 
+            // Tambahkan kebijakan CORS jika diperlukan
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+
             //Swagger configuration
             services.AddSwaggerGen(c =>
             {
@@ -57,6 +68,8 @@ namespace Gudang_Super_Market
             }
 
             app.UseMiddleware<ErrorHandlerMiddleware>();
+
+            app.UseCors();
 
             app.UseRouting();
 

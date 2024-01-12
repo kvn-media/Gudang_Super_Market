@@ -1,74 +1,45 @@
-# Gudang Super Market App
+# Gudang Super Market API
 
 ## Deskripsi
-Aplikasi Gudang Super Market adalah aplikasi manajemen gudang sederhana yang dibangun dengan menggunakan ASP.NET Core dan PostgreSQL. Aplikasi ini memiliki fitur pendaftaran pengguna, login, manajemen barang, dan manajemen gudang.
+Ini adalah API untuk manajemen gudang pada Gudang Super Market. API ini menyediakan endpoint untuk manajemen pengguna, gudang, dan barang.
 
-## Persyaratan
-
-Sebelum menjalankan aplikasi, pastikan Anda telah menginstall:
-
-- [.NET SDK](https://dotnet.microsoft.com/download)
+## Prasyarat
+Pastikan Anda telah menginstal:
+- [.NET Core](https://dotnet.microsoft.com/download)
 - [PostgreSQL](https://www.postgresql.org/download/)
 
-## Konfigurasi
+## Cara Menjalankan Aplikasi
+1. Clone repositori ini.
+2. Buka terminal dan pindah ke direktori proyek.
+3. Buka file `appsettings.json` dan sesuaikan string koneksi database.
+4. Jalankan perintah berikut:
+   ```bash
+   dotnet restore
+   dotnet ef database update
+   dotnet run
+   ```
+5. Aplikasi akan berjalan di `http://localhost:5000` atau `https://localhost:5001`.
 
-1. Buka file `appsettings.json` dan sesuaikan koneksi database PostgreSQL Anda:
+## Endpoints API
+- **/auth/register**: Endpoint untuk registrasi pengguna baru.
+- **/auth/login**: Endpoint untuk login pengguna dan mendapatkan token JWT.
+- **/gudang**: Endpoint CRUD untuk gudang.
+- **/barang**: Endpoint CRUD untuk barang.
+- **/barang/monitoring**: Endpoint untuk mendapatkan data pemantauan barang.
 
-    ```json
-    "ConnectionStrings": {
-        "DefaultConnection": "Host=localhost;Database=gudangsupermarket;Username=YOU_USERNAME;Password=YOUR_PASSWORD;"
-    },
-    ```
+## Penggunaan dengan Postman
+1. **Registrasi Pengguna:**
+   - Endpoint: `POST /auth/register`
+   - Body: Informasi pengguna (username, password, dll.).
 
-2. Sesuaikan konfigurasi JWT:
+2. **Login Pengguna:**
+   - Endpoint: `POST /auth/login`
+   - Body: Kredensial pengguna (username, password).
 
-    ```json
-    "Jwt": {
-        "Issuer": "YOUR_ISSUER",
-        "Audience": "YOUR_TARGET_AUDIENCE",
-        "SecretKey": "YOUR_SECRETKEY"
-    },
-    ```
+3. **Mendapatkan Token:**
+   - Gunakan token yang diperoleh dari langkah login pada header setiap permintaan API yang memerlukan otentikasi.
 
-## Menjalankan Aplikasi
-
-1. Buka terminal dan navigasi ke direktori proyek:
-
-    ```bash
-    cd /path/to/Gudang_Super_Market
-    ```
-
-2. Jalankan aplikasi:
-
-    ```bash
-    dotnet run
-    ```
-
-3. Buka browser dan akses [http://localhost:5000](http://localhost:5000).
-
-## Migrasi Database
-
-Untuk membuat dan memperbarui skema database, gunakan perintah berikut:
-
-```bash
-dotnet ef database update
-```
-
-Jika terdapat masalah, pastikan untuk memeriksa konfigurasi koneksi dan izin akses database.
-
-## Swagger
-
-Dokumentasi API dapat diakses menggunakan Swagger. Saat aplikasi berjalan, akses [http://localhost:5000/swagger](http://localhost:5000/swagger) untuk melihat dan menguji endpoint API.
-
-## Troubleshooting
-
-- Jika terjadi kesalahan autentikasi PostgreSQL, pastikan kata sandi dan izin akses benar.
-- Pastikan server PostgreSQL berjalan dan dapat diakses di `localhost`.
-
-## Kontribusi
-
-Jika Anda ingin berkontribusi pada proyek ini, silakan buat _pull request_ dan laporkan _issue_ di [repository GitHub](https://github.com/kvn-media/Gudang_Super_Market).
-
-```
-
-Gantilah "/path/to/Gudang_Super_Market" dengan lokasi aktual proyek Anda. Anda juga dapat menyesuaikan kontennya sesuai dengan kebutuhan spesifik aplikasi Anda.
+4. **Manajemen Gudang dan Barang:**
+   - Gunakan endpoint CRUD untuk manajemen gudang dan barang.
+   - Endpoint: `/gudang`, `/barang`, `/barang/monitoring`.
+   - Sertakan token di header untuk otorisasi.
